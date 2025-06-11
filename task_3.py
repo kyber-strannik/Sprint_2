@@ -17,11 +17,10 @@ class PointsForMeters:
         else:
             return meters * 0.5
         
-class TotalPoints(PointsForPlace, PointsForMeters):
-    @staticmethod
-    def get_total_points(meters, place):
-        place_points = TotalPoints().get_points_for_place(place)
-        meters_points = TotalPoints().get_points_for_meters(meters)
+class TotalPoints(PointsForPlace, PointsForMeters):    
+    def get_total_points(self,meters, place):
+        place_points = self.get_points_for_place(place)
+        meters_points = self.get_points_for_meters(meters)
         return place_points + meters_points
 
 points_for_place = PointsForPlace()

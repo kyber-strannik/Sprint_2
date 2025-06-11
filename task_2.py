@@ -16,8 +16,8 @@ class Drama(Movies):
 
 comedy = Comedy()
 comedy.add_movie('Большой куш')
-print(comedy.movies)
+print(f"Комедии: {comedy.movies}")
 
 drama = Drama()
 drama.add_movie('Оружейный барон')
-print(drama.movies)
+print(f"Драмы: {drama.movies}")
